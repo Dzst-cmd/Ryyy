@@ -1,9 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>إنجاز - مهام وعادات</title>
+    <!-- OneSignal Integration -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        try {
+          await OneSignal.init({
+            appId: "1f6e2650-688c-4e56-932a-95206540361d",
+            notifyButton: {
+              enable: false, 
+            },
+            allowLocalhostAsSecureOrigin: true,
+          });
+        } catch (error) {
+          console.warn("OneSignal (Web) is not fully configured on the dashboard: ", error.message || error);
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

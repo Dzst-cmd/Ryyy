@@ -1,64 +1,21 @@
-import { Product } from './types';
+import { Task, Habit, Category } from './types';
 
-export const products: Product[] = [
-  {
-    id: '1',
-    name: 'ساعة ذكية فاخرة',
-    price: 1200,
-    image: 'https://picsum.photos/seed/watch/400/400',
-    description: 'ساعة ذكية متطورة تتبع نشاطك البدني وتتصل بهاتفك بسلاسة مع تصميم راقٍ.',
-    category: 'إلكترونيات',
-    rating: 4.8,
-    reviewsCount: 128
-  },
-  {
-    id: '2',
-    name: 'سماعات إلغاء الضجيج',
-    price: 850,
-    image: 'https://picsum.photos/seed/headphones/400/400',
-    description: 'استمتع بصوت نقي وعزلة تامة عن الضجيج الخارجي مع بطارية تدوم طويلاً.',
-    category: 'إلكترونيات',
-    rating: 4.9,
-    reviewsCount: 256
-  },
-  {
-    id: '3',
-    name: 'قميص قطني عصري',
-    price: 150,
-    image: 'https://picsum.photos/seed/shirt/400/400',
-    description: 'قميص قطني 100% مريح جداً ومناسب لجميع المناسبات اليومية.',
-    category: 'أزياء',
-    rating: 4.5,
-    reviewsCount: 89
-  },
-  {
-    id: '4',
-    name: 'طقم عطري رجالي',
-    price: 450,
-    image: 'https://picsum.photos/seed/perfume/400/400',
-    description: 'مجموعة من الروائح الشرقية والغربية المميزة التي تدوم طويلاً.',
-    category: 'جمال',
-    rating: 4.7,
-    reviewsCount: 154
-  },
-  {
-    id: '5',
-    name: 'حقيبة يد جلدية',
-    price: 600,
-    image: 'https://picsum.photos/seed/bag/400/400',
-    description: 'حقيبة مصنوعة من الجلد الطبيعي بتصميم كلاسيكي يتناسب مع ذوقك الرفيع.',
-    category: 'أزياء',
-    rating: 4.6,
-    reviewsCount: 72
-  },
-  {
-    id: '6',
-    name: 'آلة صنع القهوة',
-    price: 900,
-    image: 'https://picsum.photos/seed/coffee/400/400',
-    description: 'ابدأ يومك بكوب قهوة احترافي في منزلك مع آلتنا الحديثة.',
-    category: 'منزل',
-    rating: 4.8,
-    reviewsCount: 210
-  }
+export const categories: Category[] = [
+  { id: '1', name: 'العمل', icon: '💼', color: 'bg-blue-500' },
+  { id: '2', name: 'الصحة', icon: '🍎', color: 'bg-green-500' },
+  { id: '3', name: 'شخصي', icon: '👤', color: 'bg-purple-500' },
+  { id: '4', name: 'دراسة', icon: '📚', color: 'bg-orange-500' },
+];
+
+export const initialTasks: Task[] = [
+  { id: 't1', title: 'تحضير عرض المشروع', isCompleted: false, category: 'العمل', priority: 'عالية', time: '09:00 ص' },
+  { id: 't2', title: 'ممارسة رياضة المشي', isCompleted: true, category: 'الصحة', priority: 'متوسطة', time: '07:30 ص' },
+  { id: 't3', title: 'قراءة فصل من كتاب', isCompleted: false, category: 'شخصي', priority: 'منخفضة', time: '10:00 م' },
+  { id: 't4', title: 'مراجعة دروس البرمجة', isCompleted: false, category: 'دراسة', priority: 'عالية', time: '04:00 م' },
+];
+
+export const initialHabits: Habit[] = [
+  { id: 'h1', title: 'شرب الماء', icon: '💧', streak: 5, completedDays: [1, 2, 3, 4, 5], color: 'text-blue-500' },
+  { id: 'h2', title: 'التأمل', icon: '🧘', streak: 12, completedDays: [0, 1, 2, 3, 5, 6], color: 'text-purple-500' },
+  { id: 'h3', title: 'النوم المبكر', icon: '🌙', streak: 3, completedDays: [4, 5, 6], color: 'text-indigo-500' },
 ];

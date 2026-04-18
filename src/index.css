@@ -3,9 +3,11 @@
 
 @theme {
   --font-sans: "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
-  --color-primary: #2563eb;
-  --color-accent: #3b82f6;
-  --color-dark: #0f172a;
+  --color-primary: #6366f1; /* Indigo */
+  --color-success: #10b981; /* Emerald */
+  --color-warning: #f59e0b; /* Amber */
+  --color-danger: #ef4444; /* Rose */
+  --color-slate: #f1f5f9;
 }
 
 @layer base {
