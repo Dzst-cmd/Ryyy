@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #2563eb;
+  --color-accent: #3b82f6;
+  --color-dark: #0f172a;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-50 text-zinc-900 antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
